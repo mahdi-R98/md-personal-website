@@ -15,24 +15,24 @@
     .fade-in { opacity: 0; transform: translateY(30px); }
   </style>
 </head>
-<body class="bg-white text-gray-900 dark:bg-gray-950 dark:text-white transition-colors duration-300">
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300">
 
   <!-- Theme Toggle -->
   <div class="fixed top-4 left-4 z-50">
-    <button onclick="document.documentElement.classList.toggle('dark')" class="bg-gray-200 dark:bg-gray-800 p-2 rounded-full transition hover:rotate-12">
+    <button onclick="document.documentElement.classList.toggle('dark')" class="bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-white p-2 rounded-full transition hover:rotate-12">
       ☀️/🌙
     </button>
   </div>
 
   <!-- Header -->
   <header class="text-center py-12 fade-in">
-    <h1 class="text-4xl font-bold">@MDR-DEV</h1>
+    <h1 class="text-5xl font-extrabold text-blue-600 dark:text-blue-400">@MDR-DEV</h1>
     <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">توسعه‌دهنده وب | عاشق طراحی و تجربه کاربری</p>
   </header>
 
   <!-- About -->
   <section class="max-w-4xl mx-auto px-6 py-10 fade-in">
-    <h2 class="text-2xl font-semibold mb-6">درباره من</h2>
+    <h2 class="text-3xl font-bold mb-6 text-blue-500 dark:text-blue-300">درباره من</h2>
     <div class="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
       <p>
         من یک توسعه‌دهنده وب هستم با تمرکز بر طراحی رابط‌های کاربری مدرن، سریع و قابل استفاده. مسیر من از علاقه به گرافیک شروع شد و به دنیای کدنویسی ختم شد؛ جایی که می‌تونم خلاقیت و منطق رو با هم ترکیب کنم.
@@ -40,83 +40,79 @@
       <p>
         در طول مسیر با ابزارها و فریم‌ورک‌های مختلفی کار کردم، از HTML و CSS گرفته تا Laravel و React. عاشق یادگیریم و همیشه دنبال چالش‌های تازه‌ام. هدفم ساخت تجربه‌های دیجیتال خاص و کاربردی برای کاربران واقعی‌ست.
       </p>
-      <div class="mt-6">
-        <h3 class="text-lg font-bold mb-2">مهارت‌های من در طول مسیر:</h3>
-        <ul class="space-y-2 list-disc pr-4">
-          <li>طراحی رابط کاربری با HTML/CSS و Tailwind</li>
-          <li>توسعه سمت سرور با PHP و Laravel</li>
-          <li>کار با پایگاه داده MySQL و SQL</li>
-          <li>ساخت تعاملات پویا با JavaScript و jQuery</li>
-          <li>توسعه ابزارهای اتوماسیون با Python</li>
-        </ul>
-      </div>
+      <ul class="list-disc pr-4 space-y-2 mt-6">
+        <li>طراحی رابط کاربری با HTML/CSS و Tailwind</li>
+        <li>توسعه سمت سرور با PHP و Laravel</li>
+        <li>کار با پایگاه داده MySQL و SQL</li>
+        <li>ساخت تعاملات پویا با JavaScript و jQuery</li>
+        <li>توسعه ابزارهای اتوماسیون با Python</li>
+      </ul>
     </div>
   </section>
 
   <!-- Skills -->
-  <section class="bg-gray-100 dark:bg-gray-900 py-10 fade-in">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-2xl font-semibold mb-6 text-center">مهارت‌ها</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+  <section class="bg-white dark:bg-gray-900 py-12 fade-in">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8 text-center text-blue-500 dark:text-blue-300">مهارت‌ها</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <div class="flex flex-col items-center">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-10 h-10" />
-          <span class="mt-2 text-sm">HTML5</span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-12 h-12" />
+          <span class="mt-2 text-sm font-medium">HTML5</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-10 h-10" />
-          <span class="mt-2 text-sm">CSS3</span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-12 h-12" />
+          <span class="mt-2 text-sm font-medium">CSS3</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-10 h-10" />
-          <span class="mt-2 text-sm">PHP</span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-12 h-12" />
+          <span class="mt-2 text-sm font-medium">PHP</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" class="w-10 h-10" />
-          <span class="mt-2 text-sm">Laravel</span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" class="w-12 h-12" />
+          <span class="mt-2 text-sm font-medium">Laravel</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-10 h-10" />
-          <span class="mt-2 text-sm">Python</span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-12 h-12" />
+          <span class="mt-2 text-sm font-medium">Python</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" class="w-10 h-10" />
-          <span class="mt-2 text-sm">jQuery</span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" class="w-12 h-12" />
+          <span class="mt-2 text-sm font-medium">jQuery</span>
         </div>
         <div class="flex flex-col items-center">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-10 h-10" />
-          <span class="mt-2 text-sm">SQL / MySQL</span>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-12 h-12" />
+          <span class="mt-2 text-sm font-medium">SQL / MySQL</span>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Portfolio -->
-  <section class="max-w-4xl mx-auto px-6 py-10 fade-in">
-    <h2 class="text-2xl font-semibold mb-4">نمونه‌کارها</h2>
+    <!-- Portfolio -->
+  <section class="max-w-5xl mx-auto px-6 py-12 fade-in">
+    <h2 class="text-3xl font-bold mb-6 text-blue-500 dark:text-blue-300">نمونه‌کارها</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg border border-gray-300 dark:border-gray-700">
-        <h3 class="text-lg font-bold">پروژه اول</h3>
-        <p class="text-gray-600 dark:text-gray-400 text-sm mt-2">توضیح کوتاه درباره پروژه. لینک بعداً اضافه می‌شه.</p>
+      <div class="bg-blue-50 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-bold text-blue-700 dark:text-blue-300">پروژه اول</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">توضیح کوتاه درباره پروژه. لینک بعداً اضافه می‌شه.</p>
       </div>
-      <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg border border-gray-300 dark:border-gray-700">
-        <h3 class="text-lg font-bold">پروژه دوم</h3>
-        <p class="text-gray-600 dark:text-gray-400 text-sm mt-2">توضیح کوتاه درباره پروژه. لینک بعداً اضافه می‌شه.</p>
+      <div class="bg-blue-50 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-lg font-bold text-blue-700 dark:text-blue-300">پروژه دوم</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">توضیح کوتاه درباره پروژه. لینک بعداً اضافه می‌شه.</p>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="bg-gray-100 dark:bg-gray-900 py-10 fade-in">
+  <section class="bg-white dark:bg-gray-900 py-12 fade-in">
     <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="text-2xl font-semibold mb-4">تماس با من</h2>
-      <p class="text-gray-700 dark:text-gray-300 mb-4">برای همکاری یا ارتباط، خوشحال می‌شم پیام بدی</p>
-      <a href="mailto:your-email@example.com" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition">ارسال ایمیل</a>
+      <h2 class="text-3xl font-bold mb-4 text-blue-500 dark:text-blue-300">تماس با من</h2>
+      <p class="text-gray-700 dark:text-gray-300 mb-6">برای همکاری یا ارتباط، خوشحال می‌شم پیام بدی</p>
+      <a href="mailto:mvm18348@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition">ارسال ایمیل</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-6 text-gray-500 text-sm fade-in">
-    ساخته شده توسط مهدیار | طراحی و توسعه توسط @MDR-DEV
+  <footer class="text-center py-6 text-gray-500 text-xs fade-in">
+    ساخته شده توسط مهدیار | @MDR-DEV
   </footer>
 
   <!-- GSAP Animations -->
