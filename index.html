@@ -8,22 +8,22 @@
   <style>
     :root {
       --bg-light: #ffffff;
-      --text-light: #1c1c1c;
+      --text-light: #1e293b;
       --bg-dark: #0f172a;
       --text-dark: #f8fafc;
       --primary: #0284c7;
-      --accent: #eab308;
-      --card-bg-light: #f1f5f9;
-      --card-bg-dark: #1e293b;
+      --accent: #38bdf8;
+      --card-light: #f8fafc;
+      --card-dark: #1e293b;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
+      font-family: "Segoe UI", Tahoma, sans-serif;
       line-height: 1.7;
-      transition: background 0.3s, color 0.3s;
+      transition: background 0.4s ease, color 0.4s ease;
     }
 
     body.light {
@@ -41,115 +41,70 @@
       justify-content: space-between;
       align-items: center;
       padding: 15px 40px;
-      border-bottom: 1px solid rgba(0,0,0,0.1);
-      background: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.85);
       backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 50;
     }
+    body.dark header { background: rgba(15,23,42,0.9); border-color: rgba(255,255,255,0.1); }
 
-    body.dark header {
-      background: rgba(15,23,42,0.8);
-      border-color: rgba(255,255,255,0.1);
-    }
-
-    header img {
-      height: 70px;
-    }
+    header img { height: 65px; }
 
     .toggle-btn {
       background: var(--primary);
       color: #fff;
       border: none;
-      padding: 10px 18px;
-      border-radius: 30px;
+      padding: 10px 20px;
+      border-radius: 25px;
       cursor: pointer;
-      font-size: 14px;
       font-weight: bold;
-      transition: all 0.3s;
+      transition: 0.3s;
     }
-    .toggle-btn:hover {
-      background: var(--accent);
-      color: #000;
-    }
+    .toggle-btn:hover { background: var(--accent); }
 
-    section {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 0 20px;
-    }
+    section { max-width: 1100px; margin: 80px auto; padding: 0 20px; }
+    h2 { font-size: 34px; text-align: center; margin-bottom: 40px; color: var(--primary); }
 
-    h2 {
-      font-size: 32px;
-      margin-bottom: 25px;
-      text-align: center;
-      color: var(--primary);
-    }
-
-    #about p {
-      font-size: 18px;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
+    #about p { font-size: 18px; max-width: 800px; margin: auto; text-align: center; line-height: 1.9; }
 
     .skills {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 30px;
-      justify-items: center;
-      margin-top: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
     }
 
     .skill {
-      background: var(--card-bg-light);
-      padding: 20px;
+      background: var(--card-light);
+      padding: 25px 15px;
       border-radius: 16px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      transition: all 0.3s;
-      width: 100%;
       text-align: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+      transition: 0.3s ease;
     }
-    body.dark .skill { background: var(--card-bg-dark); }
+    body.dark .skill { background: var(--card-dark); }
 
-    .skill:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    }
-
-    .skill i, .skill img {
-      font-size: 50px;
-      margin-bottom: 12px;
-    }
-
-    .skill span {
-      font-weight: bold;
-      font-size: 16px;
-    }
+    .skill:hover { transform: translateY(-7px); box-shadow: 0 12px 20px rgba(0,0,0,0.2); }
+    .skill i, .skill img { font-size: 50px; margin-bottom: 12px; }
+    .skill span { display: block; font-weight: 600; font-size: 16px; }
 
     footer {
       background: var(--primary);
       color: #fff;
-      padding: 30px;
       text-align: center;
-      margin-top: 80px;
-      clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+      padding: 40px 20px;
+      margin-top: 100px;
+      clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
     }
-
-    footer p {
-      margin: 8px 0;
-      font-size: 15px;
-    }
-
-    footer .social i {
-      margin: 0 8px;
-      font-size: 20px;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
+    footer p { margin: 8px 0; font-size: 15px; }
+    footer .social i { margin: 0 10px; font-size: 22px; cursor: pointer; transition: 0.3s; }
     footer .social i:hover { color: var(--accent); }
 
+    /* Animations */
+    [data-animate] { opacity: 0; transform: translateY(30px); transition: 0.6s ease; }
+    [data-animate].active { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body class="light">
@@ -158,22 +113,22 @@
     <button class="toggle-btn" onclick="toggleTheme()">🌓 تغییر تم</button>
   </header>
 
-  <section id="about">
+  <section id="about" data-animate>
     <h2>درباره من</h2>
     <p>
-      من <strong>مهدیار</strong>، توسعه‌دهنده وب و اپلیکیشن هستم. علاقه زیادی به طراحی و پیاده‌سازی نرم‌افزارهای کارآمد و خلاقانه دارم. 
-      همیشه در حال یادگیری تکنولوژی‌های جدید هستم و باور دارم برنامه‌نویسی یک هنر بی‌پایانه. هدفم خلق تجربه‌های دیجیتال زیبا و کاربردی است.
+      من <strong>مهدیار</strong> هستم، توسعه‌دهنده وب و اپلیکیشن با تمرکز روی طراحی رابط‌های کاربری زیبا و ساخت نرم‌افزارهای بهینه. 
+      عاشق کدنویسی، حل مسئله و خلق تجربه‌های دیجیتالی منحصربه‌فردم. همیشه دنبال یادگیری جدیدترین تکنولوژی‌ها هستم تا بتونم بهترین‌ها رو بسازم.
     </p>
   </section>
 
-  <section id="skills">
+  <section id="skills" data-animate>
     <h2>مهارت‌ها</h2>
     <div class="skills">
       <div class="skill"><i class="fab fa-php" style="color:#8993be"></i><span>PHP</span></div>
-      <div class="skill"><i class="fab fa-html5" style="color:#e34f26"></i><span>HTML</span></div>
-      <div class="skill"><i class="fab fa-css3-alt" style="color:#1572b6"></i><span>CSS</span></div>
+      <div class="skill"><i class="fab fa-html5" style="color:#e34f26"></i><span>HTML5</span></div>
+      <div class="skill"><i class="fab fa-css3-alt" style="color:#1572b6"></i><span>CSS3</span></div>
       <div class="skill"><i class="fab fa-python" style="color:#3776ab"></i><span>Python</span></div>
-      <div class="skill"><i class="fas fa-code" style="color:#0769ad"></i><span>jQuery</span></div>
+      <div class="skill"><i class="fab fa-js-square" style="color:#f7df1e"></i><span>jQuery / JS</span></div>
       <div class="skill"><i class="fas fa-database" style="color:#f29111"></i><span>SQL</span></div>
       <div class="skill"><img src="https://laravel.com/img/logomark.min.svg" alt="Laravel" width="50"><span>Laravel</span></div>
     </div>
@@ -194,6 +149,15 @@
       document.body.classList.toggle('dark');
       document.body.classList.toggle('light');
     }
+
+    // scroll animation
+    const items = document.querySelectorAll('[data-animate]');
+    window.addEventListener('scroll', () => {
+      items.forEach(el => {
+        const rect = el.getBoundingClientRect().top;
+        if(rect < window.innerHeight - 100) el.classList.add('active');
+      });
+    });
   </script>
 </body>
 </html>
