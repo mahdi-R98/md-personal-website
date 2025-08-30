@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahdiar | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-light: #ffffff;
+      --text-light: #1c1c1c;
+      --bg-dark: #0f172a;
+      --text-dark: #f8fafc;
+      --primary: #0284c7;
+      --accent: #eab308;
+      --card-bg-light: #f1f5f9;
+      --card-bg-dark: #1e293b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      line-height: 1.7;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.light {
+      background: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    body.dark header {
+      background: rgba(15,23,42,0.8);
+      border-color: rgba(255,255,255,0.1);
+    }
+
+    header img {
+      height: 70px;
+    }
+
+    .toggle-btn {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    .toggle-btn:hover {
+      background: var(--accent);
+      color: #000;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 25px;
+      text-align: center;
+      color: var(--primary);
+    }
+
+    #about p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 30px;
+      justify-items: center;
+      margin-top: 40px;
+    }
+
+    .skill {
+      background: var(--card-bg-light);
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+      width: 100%;
+      text-align: center;
+    }
+    body.dark .skill { background: var(--card-bg-dark); }
+
+    .skill:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .skill i, .skill img {
+      font-size: 50px;
+      margin-bottom: 12px;
+    }
+
+    .skill span {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    footer {
+      background: var(--primary);
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+      margin-top: 80px;
+      clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    footer p {
+      margin: 8px 0;
+      font-size: 15px;
+    }
+
+    footer .social i {
+      margin: 0 8px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    footer .social i:hover { color: var(--accent); }
+
+  </style>
+</head>
+<body class="light">
+  <header>
+    <img src="ChatGPT Image Aug 30, 2025, 01_12_28 PM.png" alt="Mahdiar Logo">
+    <button class="toggle-btn" onclick="toggleTheme()">🌓 تغییر تم</button>
+  </header>
+
+  <section id="about">
+    <h2>درباره من</h2>
+    <p>
+      من <strong>مهدیار</strong>، توسعه‌دهنده وب و اپلیکیشن هستم. علاقه زیادی به طراحی و پیاده‌سازی نرم‌افزارهای کارآمد و خلاقانه دارم. 
+      همیشه در حال یادگیری تکنولوژی‌های جدید هستم و باور دارم برنامه‌نویسی یک هنر بی‌پایانه. هدفم خلق تجربه‌های دیجیتال زیبا و کاربردی است.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>مهارت‌ها</h2>
+    <div class="skills">
+      <div class="skill"><i class="fab fa-php" style="color:#8993be"></i><span>PHP</span></div>
+      <div class="skill"><i class="fab fa-html5" style="color:#e34f26"></i><span>HTML</span></div>
+      <div class="skill"><i class="fab fa-css3-alt" style="color:#1572b6"></i><span>CSS</span></div>
+      <div class="skill"><i class="fab fa-python" style="color:#3776ab"></i><span>Python</span></div>
+      <div class="skill"><i class="fas fa-code" style="color:#0769ad"></i><span>jQuery</span></div>
+      <div class="skill"><i class="fas fa-database" style="color:#f29111"></i><span>SQL</span></div>
+      <div class="skill"><img src="https://laravel.com/img/logomark.min.svg" alt="Laravel" width="50"><span>Laravel</span></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Mahdiar | @MDR-DEV</p>
+    <p class="social">
+      <i class="fab fa-github"></i>
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-telegram"></i>
+    </p>
+    <p>ساخته شده با عشق 💙</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      document.body.classList.toggle('light');
+    }
+  </script>
+</body>
+</html>
